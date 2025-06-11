@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Spam Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        textarea {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h3 {
+            margin-top: 30px;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Spam Email Classifier</h2>
+    <form method="post" action="/predict">
+        <textarea name="email" rows="6" placeholder="Paste your email text here..."></textarea><br>
+        <input type="submit" value="Detect">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
